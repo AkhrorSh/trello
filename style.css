@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Anta", sans-serif;
+  color: white;
+}
+
+body {
+  height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  background: rgba(29, 33, 37, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.start {
+  max-width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  .menu img {
+    width: 24px;
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  .menu img:hover {
+    transform: scale(1.1)
+  }
+
+  .logo img {
+    width: 100%;
+  }
+
+  button {
+    font-weight: 500;
+    border: none;
+    background: transparent;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: s-resize;
+    transition: .5s;
+  }
+
+  button:hover {
+    text-decoration: underline;
+  }
+
+
+
+  .add {
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px rgb(72, 72, 72) solid;
+    cursor: pointer;
+  }
+
+  .add:active {
+    border: 1px rgb(86, 86, 86) solid;
+  }
+
+  .add span {
+    transition: .5s;
+  }
+
+  .add:hover span {
+    rotate: 90deg;
+  }
+
+  img {
+    width: 20px;
+    padding-top: 5px;
+  }
+}
+
+.end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+
+  input {
+    background: url('./public/icons/search.svg') no-repeat scroll 1px 5px;
+    height: 32px;
+    padding-left: 28px;
+    color: white;
+    border: 1px solid rgb(72, 72, 72);
+    border-radius: 10px;
+
+    outline: none;
+  }
+
+  input::placeholder {
+    color: white;
+  }
+
+  input:active {
+    border: 1px rgb(86, 86, 86) solid;
+  }
+
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  .notifications:hover {
+    rotate: 15deg;
+  }
+
+  figure {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgb(146, 18, 140);
+    text-align: center;
+    padding-top: 7px;
+    color: white;
+  }
+}
+
+
+
+section {
+  display: flex;
+  justify-content: space-between;
+  height: 895px;
+}
+
+
+
+
+.sidebar {
+  position: absolute;
+  padding: 15px;
+  width: 27%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 895px;
+  transition: 1s;
+  left: -27%;
+  background-color: rgba(29, 33, 37, 0.9);
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgb(86, 86, 86);
+
+
+    .left {
+      display: flex;
+      color: white;
+      gap: 10px;
+    }
+  }
+
+  .desks,
+  .users,
+  .settings,
+  .tables,
+  .calendar {
+    padding-left: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+
+    p:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .text {
+    font-size: 18px;
+    color: rgb(176, 176, 176);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+}
+
+
+
+
+.wp {
+  width: 48px;
+  border-radius: 5px;
+  background: rgb(25, 148, 36);
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.wp_name:hover {
+  text-decoration: underline;
+}
+
+
+
+.desk-menu {
+  display: flex;
+  gap: 5px;
+  font-size: 18px;
+  margin: 0 0 10px 10px;
+}
+
+.desk-menu:hover {
+  text-decoration: underline;
+}
+
+.desk-menu_bg {
+  border-radius: 5px;
+  width: 32px;
+  height: 24px;
+  background-color: rgb(131, 48, 62);
+}
+
+
+
+
+.desk_container {
+  background: rgb(131, 48, 62);
+  width: 100%;
+  height: 895px;
+  right: 0;
+  position: absolute;
+  transition: 1s;
+
+
+  .desk_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px 15px;
+
+    .start {
+
+      button {
+        color: black;
+        background-color: white;
+        border-radius: 5px;
+        padding: 2px 5px;
+      }
+    }
+
+    .end {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .share {
+        color: black;
+        background-color: white;
+        border-radius: 5px;
+        padding: 5px 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .share:hover {
+        text-decoration: underline;
+      }
+    }
+
+  }
+}
+
+.filtres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.columns {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.columns_place {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.add_column {
+  width: 320px;
+  height: 170px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+
+  figure {
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+.close_menu {
+  rotate: 90deg;
+  border: 1px solid red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.column_title {
+  height: 32px;
+  color: white;
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 10px;
+  outline: none;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.column_title::placeholder {
+  color: white;
+}
+
+.column_title:active {
+  border: 1px rgb(102, 102, 102) solid;
+}
+
+.send {
+  height: 32px;
+  color: white;
+  border: 1px solid rgb(147, 147, 147);
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.send:active {
+  border: 1px rgb(102, 102, 102) solid;
+}
+
+
+
+
+
+
+.box {
+  width: 320px;
+  height: 170px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
