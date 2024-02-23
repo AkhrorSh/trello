@@ -10,6 +10,7 @@
 
 body {
   height: 100vh;
+  background: url(./public/images/andrew-kliatskyi-mg8ObwRoBb0-unsplash.jpg) no-repeat center/cover;
 }
 
 img {
@@ -21,7 +22,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 5px;
 }
 
 .start {
@@ -144,22 +145,35 @@ section {
   height: 895px;
 }
 
+/* 
+.sidebar p {
+  display: none;
+}
 
+.sidebar div span img {
+  width: 64px;
+  margin-left: -8px;
+}
 
+.text {
+  display: none !important;
+} */
 
 .sidebar {
-  position: absolute;
   padding: 15px;
-  width: 27%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   gap: 10px;
   height: 895px;
-  transition: 1s;
-  left: -27%;
-  background-color: rgba(29, 33, 37, 0.9);
+  border-right: 1px solid black;
+  /* position: absolute;
+  left: -20%; */
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: .7s;
 
   nav {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -172,6 +186,22 @@ section {
       display: flex;
       color: white;
       gap: 10px;
+
+      .wp {
+        width: 48px;
+        border-radius: 5px;
+        background: rgb(25, 148, 36);
+        color: white;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .wp_name:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -180,14 +210,44 @@ section {
   .settings,
   .tables,
   .calendar {
-    padding-left: 5px;
+    padding-left: 0px;
     display: flex;
     justify-content: space-between;
     font-style: italic;
+    transition: .7s;
 
     p:hover {
       text-decoration: underline;
     }
+  }
+
+  .desks div,
+  .users div, 
+  .settings div,
+  .tables div,
+  .calendar div {
+    display: flex;
+    transition: .7s;
+  }
+
+  .desks div span,
+  .users div span, 
+  .settings div span,
+  .tables div span,
+  .calendar div span {
+    transition: .3s;
+    filter: blur(0.8px);
+  }
+
+  .desks div span:hover,
+  .users div span:hover, 
+  .settings div span:hover,
+  .tables div span:hover,
+  .calendar div span:hover {
+    transform: scale(1.1);
+    border-bottom: 1px solid white;
+    filter: blur(1px);
+    filter: blur(0px);
   }
 
   .text {
@@ -201,57 +261,35 @@ section {
     border-radius: 5px;
   }
 
-}
+  .desk-menu {
+    display: flex;
+    gap: 5px;
+    font-size: 18px;
+    margin: 0 0 10px 10px;
+  }
 
+  .desk-menu:hover {
+    text-decoration: underline;
+  }
 
-
-
-.wp {
-  width: 48px;
-  border-radius: 5px;
-  background: rgb(25, 148, 36);
-  color: white;
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
-
-.wp_name:hover {
-  text-decoration: underline;
-}
-
-
-
-.desk-menu {
-  display: flex;
-  gap: 5px;
-  font-size: 18px;
-  margin: 0 0 10px 10px;
-}
-
-.desk-menu:hover {
-  text-decoration: underline;
-}
-
-.desk-menu_bg {
-  border-radius: 5px;
-  width: 32px;
-  height: 24px;
-  background-color: rgb(131, 48, 62);
+  .desk-menu_bg {
+    border-radius: 5px;
+    width: 32px;
+    height: 24px;
+    background: url(./public/images/andrew-kliatskyi-mg8ObwRoBb0-unsplash.jpg) no-repeat center/cover;
+  }
 }
 
 
 
 
 .desk_container {
-  background: rgb(131, 48, 62);
   width: 100%;
+  max-width: 100%;
   height: 895px;
-  right: 0;
-  position: absolute;
-  transition: 1s;
+  /* position: absolute;
+  left: 0%; */
+  transition: .7s;
 
 
   .desk_header {
@@ -260,10 +298,9 @@ section {
     align-items: center;
     gap: 10px;
     background-color: rgba(0, 0, 0, 0.1);
-    padding: 20px 15px;
+    padding: 8px 15px;
 
     .start {
-
       button {
         color: black;
         background-color: white;
@@ -326,6 +363,43 @@ section {
   align-items: center;
   margin: 5px;
 
+  form {
+    display: none;
+  }
+
+  input {
+    width: 260px;
+    height: 48px;
+    backdrop-filter: blur(10px);
+    background: transparent;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid black;  
+    padding: 12px;
+    margin-bottom: 5px;
+  }
+
+  input::placeholder {
+    color: white;
+  }
+
+  button {
+    width: 85%;
+    height: 38px;
+    background: black;
+    outline: none;
+    border-radius: 8px;
+    border: none;
+
+  } 
+
+  span {
+    padding: 9px 12px;
+    border-radius: 8px;
+    background: black;
+  }
+
   figure {
     width: 98px;
     height: 98px;
@@ -338,14 +412,20 @@ section {
 }
 
 
-.close_menu {
+.arrow {
   rotate: 90deg;
-  border: 1px solid red;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  right: 0%;
+  background-color: rgb(255, 255, 255,  0.2);
+  transition: .7s;
+}
 
+.arrow img {
+  width: 16px;
 }
 
 .column_title {
@@ -389,5 +469,3 @@ section {
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.3);
 }
-
-

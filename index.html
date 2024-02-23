@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css">
-    <title>Vite App</title>
+    <link rel="shortcut icon" href="./public/images/trello_black_logo.png">
+    <title>Trello | Desk</title>
 </head>
 
 <body>
@@ -42,36 +43,54 @@
         <div class="sidebar">
             <nav>
                 <div class="left">
-                    <p>
                     <figure class="wp">P</figure>
-                    <span class="wp_name">Prodigy</span>: Working zone</p>
+                    <p><span class="wp_name">Prodigy</span>: Working zone</p>
                 </div>
 
-                <span class="close_menu"><img src="./public/icons/expand_more.svg" alt="expand more"></span>
+                <span class="arrow" data-state="true"><img src="./public/icons/expand_more.svg"
+                        alt="expand more"></span>
             </nav>
 
             <div class="desks">
-                <p><span><img src="./public/icons/desks.svg" alt=""></span>Desks</p>
+                <div>
+                    <span><img src="./public/icons/desks.svg" alt=""></span>
+                    <p>Desks</p>
+                </div>
             </div>
 
             <div class="users">
-                <p><span><img src="./public/icons/user.svg" alt=""></span>Users</p>
-                <img src="./public/icons/add.svg" alt="">
+                <div>
+                    <span><img src="./public/icons/user.svg" alt=""></span>
+                    <p>Users</p>
+                </div>
+
+                <p><img src="./public/icons/add.svg" alt=""></p>
             </div>
 
             <div class="settings">
-                <p><span><img src="./public/icons/settings.svg" alt=""></span>Desktop Settings space</p>
-                <img src="./public/icons/expand_more.svg" alt="">
+                <div>
+                    <span><img src="./public/icons/settings.svg" alt=""></span>
+                    <p>Desktop Settings space</p>
+                </div>
+
+                <p><img src="./public/icons/expand_more.svg" alt=""></p>
             </div>
 
             <p class="text">Desktop view modes...</p>
 
             <div class="tables">
-                <p><span><img src="./public/icons/tables.svg" alt=""></span>Tables</p>
+                <div>
+                    <span><img src="./public/icons/tables.svg" alt=""></span>
+                    <p>Tables</p>
+                </div>
             </div>
 
             <div class="calendar">
-                <p><span><img src="./public/icons/calendar.svg" alt=""></span>Calendar</p>
+                <div>
+                    <span><img src="./public/icons/calendar.svg" alt=""></span>
+                    <p>Calendar</p>
+                </div>
+
             </div>
 
             <p class="text">My Desks<img src="./public/icons/add.svg" alt=""></p>
@@ -85,6 +104,8 @@
 
             </div>
 
+
+
         </div>
 
         <div class="desk_container">
@@ -92,9 +113,10 @@
             <div class="desk_header">
                 <div class="start">
                     <h1 class="deck_title">Desk</h1>
-                    <img src="./public/icons/favorites.svg" alt="">
-                    <img src="./public/icons/users.svg" alt="">
-                    <button>Statistics <span><img src="./public/icons/statistics.svg" alt=""></span></button>
+                    <span><img src="./public/icons/favorites.svg" alt=""></span>
+                    <span><img src="./public/icons/users.svg" alt=""></span>
+                    <button title="Fpr Desk">Desk Filter <span><img src="./public/icons/statistics.svg"
+                                alt=""></span></button>
                     <span class="desk_accordion"><img src="./public/icons/expand_more.svg" alt=""></span>
                 </div>
 
@@ -117,8 +139,17 @@
 
             <div class="columns">
                 <div class="columns_place"></div>
-                <div class="add_column"><figure class="circle"><img src="./public/icons/add.svg" alt=""></figure></div>
-                
+                <div class="add_column">
+                    <form name="createCol">
+                        <input type="text" placeholder="Title">
+                        <br>
+                        <button>Create</button>
+                        <span class="cancel">х</span>
+                    </form>
+
+                    <figure class="circle"><img src="./public/icons/add.svg" alt=""></figure>
+                </div>
+
             </div>
 
 
